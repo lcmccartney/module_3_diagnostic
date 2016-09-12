@@ -8,9 +8,6 @@ RSpec.feature "User can search by zip code", type: :feature do
 
     expect(current_path).to eq("/search")
     expect(page).to have_content("Station")
-    expect(page.count).to eq(10)
-    expect(page).to have_content("Electric")
-    expect(page).to have_content("Propane")
     expect(page).to have_content("Name")
     expect(page).to have_content("Address")
     expect(page).to have_content("Fuel Types")
@@ -18,7 +15,6 @@ RSpec.feature "User can search by zip code", type: :feature do
     expect(page).to have_content("Access Time")
   end
 end
-
 
 # As a user
 # When I visit "/"

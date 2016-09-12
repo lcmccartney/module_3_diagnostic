@@ -1,4 +1,4 @@
-class NRELServices
+class NRELService
 
   def initialize
     @connection = Faraday.new("https://api.data.gov/nrel/alt-fuel-stations/v1.json")

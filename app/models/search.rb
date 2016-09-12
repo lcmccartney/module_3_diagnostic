@@ -1,10 +1,6 @@
 class Search < OpenStruct
 
-  def self.service
-    @@service ||= NRELService.new
-  end
-
-  
-
-
+  # def self.service
+  #   @@service ||= NRELService.new
+  # end
 end
