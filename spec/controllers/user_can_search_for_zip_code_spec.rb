@@ -1,8 +1,24 @@
-require 'rails_helpers'
+require 'rails_helper'
 
-RSpec.describe "User can search by zip code"
-  it "can view 10 closest stations within 6 miles sorted by distance"
-    
+RSpec.feature "User can search by zip code", type: :feature do
+  scenario "can view 10 closest stations within 6 miles sorted by distance" do
+    visit '/'
+    fill_in "search", with: "80203"
+    click_on "Locate"
+
+    expect(current_path).to eq("/search")
+    expect(page).to have_content("Station")
+    expect(page.count).to eq(10)
+    expect(page).to have_content("Electric")
+    expect(page).to have_content("Propane")
+    expect(page).to have_content("Name")
+    expect(page).to have_content("Address")
+    expect(page).to have_content("Fuel Types")
+    expect(page).to have_content("Distance")
+    expect(page).to have_content("Access Time")
+  end
+end
+
 
 # As a user
 # When I visit "/"

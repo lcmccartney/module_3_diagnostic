@@ -20,7 +20,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
-  gem 'simplecov', require: false
+  # gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
 end
